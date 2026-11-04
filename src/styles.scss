@@ -1,0 +1,31 @@
+@use '@angular/material' as mat;
+
+// Tema de Angular Material (sin tipografía propia: la fuente global es la de assets/fonts)
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    density: 0,
+  ));
+}
+
+@font-face {
+  font-family: 'FuenteDSW';
+  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bs-body-font-family: 'FuenteDSW', sans-serif;
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: 'FuenteDSW', sans-serif;
+  margin: 0;
+}
