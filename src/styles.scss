@@ -11,16 +11,77 @@ html {
   ));
 }
 
+// ---------- Fuente global (Nexa, desde assets/fonts) ----------
 @font-face {
   font-family: 'FuenteDSW';
-  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  src: url('/assets/fonts/NexaLight.woff2') format('woff2'),
+       url('/assets/fonts/NexaLight.woff') format('woff'),
+       url('/assets/fonts/NexaLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuenteDSW';
+  src: url('/assets/fonts/NexaRegular.woff2') format('woff2'),
+       url('/assets/fonts/NexaRegular.woff') format('woff'),
+       url('/assets/fonts/NexaRegular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'FuenteDSW';
+  src: url('/assets/fonts/NexaBold.woff2') format('woff2'),
+       url('/assets/fonts/NexaBold.woff') format('woff'),
+       url('/assets/fonts/NexaBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// ---------- Paleta de colores y variables de Bootstrap ----------
 :root {
+  // Paleta del proyecto
+  --dsw-azul-noche: #172554;
+  --dsw-azul: #2563EB;
+  --dsw-violeta: #8B5CF6;
+  --dsw-coral: #F97360;
+  --dsw-humo: #F8FAFC;
+  --dsw-gris: #64748B;
+
+  // Fuente global
   --bs-body-font-family: 'FuenteDSW', sans-serif;
+
+  // Colores base de Bootstrap
+  --bs-body-bg: #F8FAFC;
+  --bs-body-color: #64748B;
+  --bs-heading-color: #172554;
+  --bs-primary: #2563EB;
+  --bs-primary-rgb: 37, 99, 235;
+  --bs-link-color: #2563EB;
+  --bs-link-color-rgb: 37, 99, 235;
+  --bs-link-hover-color: #1D4ED8;
+  --bs-link-hover-color-rgb: 29, 78, 216;
+}
+
+// Botón principal
+.btn-primary {
+  --bs-btn-bg: #2563EB;
+  --bs-btn-border-color: #2563EB;
+  --bs-btn-hover-bg: #1D4ED8;
+  --bs-btn-hover-border-color: #1D4ED8;
+  --bs-btn-active-bg: #1E40AF;
+  --bs-btn-active-border-color: #1E40AF;
+  --bs-btn-disabled-bg: #2563EB;
+  --bs-btn-disabled-border-color: #2563EB;
+}
+
+// Tarjetas blancas sobre el fondo blanco humo
+.card {
+  --bs-card-bg: #FFFFFF;
 }
 
 html, body { height: 100%; }

@@ -4,12 +4,12 @@
      target="_blank" rel="noopener noreferrer">
     <i class="bi bi-box-arrow-up-right"></i> Documentación oficial de Angular
   </a>
-  <div id="carruselTecnologias" class="carousel slide bg-dark rounded">
+  <div id="carruselTecnologias"  class="carousel slide carousel-dark bg-white rounded shadow-sm" data-bs-ride="carousel">
     <div class="carousel-inner py-4">
       @for (d of diapositivas; track d.titulo) {
         <div class="carousel-item" [class.active]="$first">
           <img [src]="d.imagen" [alt]="d.titulo" height="220"
-               class="d-block mx-auto">
+                class="d-block mx-auto img-fluid carrusel-img">
           <div class="carousel-caption position-static pt-3">
             <h3 class="h5">{{ d.titulo }}</h3>
           </div>
